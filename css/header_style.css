@@ -1,0 +1,23 @@
+#mainHeaderBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#supportButton{
+    padding: 10px 20px;
+}
+
+#headerDivider{
+    width: 100%;
+    height: 3px;
+    color: green;
+}
