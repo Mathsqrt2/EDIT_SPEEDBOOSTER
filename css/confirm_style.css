@@ -1,0 +1,29 @@
+#confirm,
+#supportButton {
+  background-color: #1b7e2c;
+  color: white;
+
+  font-family: montserrat;
+  font-weight: 700;
+  font-size: 15px;
+
+  height: fit-content;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 20px;
+
+  border: none;
+}
+#confirm:hover,
+#supportButton:hover {
+  transform: scale(0.95, 0.95);
+}
+
+#confirm:focus,
+#supportButton:focus {
+  outline: none;
+}
+
+#supportButton {
+  margin-right: 20px;
+}

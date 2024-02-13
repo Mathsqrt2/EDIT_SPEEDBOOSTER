@@ -1,3 +1,20 @@
-*{
-    user-select: none;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+
+* {
+  user-select: none;
+}
+
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#appContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none !important;
 }
