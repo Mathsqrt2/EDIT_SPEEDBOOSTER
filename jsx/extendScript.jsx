@@ -5,13 +5,23 @@ var pluginPath;
 
 $.processEffects = {
     getEffectsArray: function() {
+        var effectsArray = [];
+        var effectsSave = new File(pluginPath + this.fixPath("\\config\\config.json"));
 
+        if (!effectsSave.exists) {
+            return JSON.stringify(effectsArray)
+        }
+        effectsSave.open("r");
+        effectsRead = effectsSave.read();
+        effectsSave.close();
+
+        return JSON.stringify(effectsRead);
     },
     implementEffect: function() {
-
+        return 0;
     },
     findElements: function() {
-
+        return 0;
     },
     fixPath: function(pathToFix) {
         var newPath = pathToFix;

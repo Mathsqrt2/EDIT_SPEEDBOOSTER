@@ -2,6 +2,7 @@
 
 * {
   user-select: none;
+  font-family: montserrat;
 }
 
 body {
@@ -17,4 +18,24 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+.alertBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.alertContent{
+  font-size: large;
+  font-weight: 800;
+  background-color: rgb(238, 125, 125);
+  padding: 22px;
+  border-radius: 32px;
+}
+.alertContent:hover{
+
+}
+.alertContent:focus{
+  outline: none;
 }
