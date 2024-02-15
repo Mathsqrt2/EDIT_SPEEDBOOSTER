@@ -1,8 +1,12 @@
 var proj = app.project;
 var seq = proj.activeSequence;
 var currentOS;
+var pluginPath;
 
 $.processEffects = {
+    getEffectsList: function(){
+        
+    },
     fixPath: function(pathToFix) {
         var newPath = pathToFix;
         if (!currentOS) {
@@ -22,6 +26,7 @@ $.processEffects = {
 function setOSValue(csinfo) {
     var obj = JSON.parse(csinfo);
     currentOS = obj.index;
+    pluginPath = obj.path;
 }
 
 function isItFirstUseJSX(path) {
