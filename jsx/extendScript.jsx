@@ -4,8 +4,14 @@ var currentOS;
 var pluginPath;
 
 $.processEffects = {
-    getEffectsList: function(){
-        
+    getEffectsArray: function() {
+
+    },
+    implementEffect: function() {
+
+    },
+    findElements: function() {
+
     },
     fixPath: function(pathToFix) {
         var newPath = pathToFix;
@@ -26,7 +32,7 @@ $.processEffects = {
 function setOSValue(csinfo) {
     var obj = JSON.parse(csinfo);
     currentOS = obj.index;
-    pluginPath = obj.path;
+    pluginPath = $.processEffects.fixPath(obj.path);
 }
 
 function isItFirstUseJSX(path) {
