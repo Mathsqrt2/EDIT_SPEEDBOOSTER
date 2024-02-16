@@ -4,10 +4,12 @@
         "properties":[
             {
                 "name":"property1",
+                "type": "text",
                 "value":"value1"
             },
             {
                 "name":"property2",
+                "type":"text",
                 "value":"value2"
             }
         ]
@@ -17,10 +19,12 @@
         "properties":[
             {
                 "name":"property1",
-                "value":"value1"
+                "type":"array",
+                "value":[21,37]
             },
             {
                 "name":"property2",
+                "type":"text",
                 "value":"value2"
             }
         ]
@@ -30,10 +34,12 @@
         "properties":[
             {
                 "name":"property1",
+                "type":"number",
                 "value":"value1"
             },
             {
                 "name":"property2",
+                "type":"text",
                 "value":"value2"
             }
         ]

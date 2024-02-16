@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  padding: 8px;
   margin-bottom: 10px;
 }
 .effectHeader {
@@ -28,15 +28,14 @@
   align-items: center;
   justify-content: space-between;
 }
-
 .effectNameBox {
   margin-left: 25px;
 }
 .buttonsCollector{
   margin-right: 25px;
 }
-#showHideEffectButton {
-  margin-right: 10px;
+#executeEffectButton{
+  margin-right: 12px;
 }
 .effectContent {
   display: flex;
