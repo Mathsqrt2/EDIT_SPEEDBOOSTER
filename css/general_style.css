@@ -30,11 +30,11 @@ body {
   font-size: large;
   font-weight: 800;
   background-color: rgb(238, 125, 125);
-  padding: 22px;
+  padding: 16px;
   border-radius: 32px;
 }
 .alertContent:hover{
-
+  transform: scale(0.95,0.95);
 }
 .alertContent:focus{
   outline: none;

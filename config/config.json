@@ -1,1 +1,41 @@
-[{"name":"test","properties":[{"name":"property1","value":"value1"},{"name":"property2","value":"value2"}]}]
+[
+    {
+        "name":"test1",
+        "properties":[
+            {
+                "name":"property1",
+                "value":"value1"
+            },
+            {
+                "name":"property2",
+                "value":"value2"
+            }
+        ]
+    },
+    {
+        "name":"test2",
+        "properties":[
+            {
+                "name":"property1",
+                "value":"value1"
+            },
+            {
+                "name":"property2",
+                "value":"value2"
+            }
+        ]
+    },
+    {
+        "name":"test3",
+        "properties":[
+            {
+                "name":"property1",
+                "value":"value1"
+            },
+            {
+                "name":"property2",
+                "value":"value2"
+            }
+        ]
+    }
+]

@@ -9,13 +9,13 @@ $.processEffects = {
         var effectsSave = new File(pluginPath + this.fixPath("\\config\\config.json"));
 
         if (!effectsSave.exists) {
-            return JSON.stringify(effectsArray)
+            return effectsArray;
         }
         effectsSave.open("r");
-        effectsRead = effectsSave.read();
+        effectsArray = effectsSave.read();
         effectsSave.close();
 
-        return JSON.stringify(effectsRead);
+        return effectsArray;
     },
     implementEffect: function() {
         return 0;
