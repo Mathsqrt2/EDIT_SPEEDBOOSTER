@@ -1,5 +1,6 @@
 #confirm,
-#supportButton {
+#supportButton,
+.effectButton {
   background-color: #1b7e2c;
   color: white;
 
@@ -15,15 +16,22 @@
   border: none;
 }
 #confirm:hover,
-#supportButton:hover {
+#supportButton:hover,
+.effectButton:hover {
   transform: scale(0.95, 0.95);
 }
 
 #confirm:focus,
-#supportButton:focus {
+#supportButton:focus,
+.effectButton:focus {
   outline: none;
 }
 
 #supportButton {
   margin-right: 20px;
+}
+
+.effectButton{
+  font-size: 13px;
+  padding: 4px 8px;
 }

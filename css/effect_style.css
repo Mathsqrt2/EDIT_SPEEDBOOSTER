@@ -1,3 +1,46 @@
-.effectField {
+.effectsCollector{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 15px 0px;
+  width: 100%;
+  height: fit-content;
+}
+.effectBody {
+  background-color: #151515;
+  width: 75%;
+  border-radius: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
+}
+.effectHeader {
+  width:100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.effectNameBox {
+  margin-left: 25px;
+}
+.buttonsCollector{
+  margin-right: 25px;
+}
+#showHideEffectButton {
+  margin-right: 10px;
+}
+.effectContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
