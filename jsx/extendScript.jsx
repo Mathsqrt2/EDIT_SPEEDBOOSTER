@@ -18,6 +18,7 @@ $.processEffects = {
         return effectsArray;
     },
     implementEffect: function() {
+        alert("works");
         return 0;
     },
     findElements: function() {

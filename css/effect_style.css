@@ -29,6 +29,7 @@
   justify-content: space-between;
 }
 .effectNameBox {
+  font-weight: 800;
   margin-left: 25px;
 }
 .buttonsCollector{
