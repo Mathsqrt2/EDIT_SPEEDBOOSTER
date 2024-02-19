@@ -1,9 +1,9 @@
-.effectsCollector{
+.effectsCollector {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   margin: 15px 0px;
   width: 100%;
   height: fit-content;
@@ -21,7 +21,7 @@
   margin-bottom: 10px;
 }
 .effectHeader {
-  width:100%;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
@@ -32,10 +32,10 @@
   font-weight: 800;
   margin-left: 25px;
 }
-.buttonsCollector{
+.buttonsCollector {
   margin-right: 25px;
 }
-#executeEffectButton{
+#executeEffectButton {
   margin-right: 12px;
 }
 .effectContent {
@@ -44,9 +44,27 @@
   align-items: center;
   justify-content: center;
 }
-.effectBox{
+.effectBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.effectPropertyLabel {
+  margin: 10px 0 10px 0;
+  font-size: 10pt;
+}
+
+.subPropertyInput {
+  font-family: montserrat;
+  font-size: 8pt;
+
+  color: white;
+  background-color: #333333;
+  border: solid 0.9px #2aa73f;
+  outline: none;
+
+  padding: 6px 12px;
+  margin: 0 0 10px 0;
 }

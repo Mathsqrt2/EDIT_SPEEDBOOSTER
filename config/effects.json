@@ -3,8 +3,10 @@
         "name": "Stabilize",
         "properties": [
             {
-                "name": "amount",
+                "name": "amount [%]",
                 "type": "number",
+                "min": 0,
+                "max": 200,
                 "value": 25
             }
         ]
@@ -13,8 +15,10 @@
         "name": "Scale animation",
         "properties": [
             {
-                "name": "velocity",
+                "name": "velocity [%/sec]",
                 "type": "number",
+                "min": 0,
+                "max": 10,
                 "value": 5
             },
             {

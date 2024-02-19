@@ -61,6 +61,8 @@
   padding: 2px 4px;
   border: solid 0.9px #2aa73f;
   outline: none;
+
+  cursor: pointer;
 }
 #applyFor:focus{
   outline: none;
@@ -73,7 +75,7 @@
   font-size: 8pt;
   
   width: 100%;
-  padding: 2px 4px;
+  padding: 8px 12px;
   border: solid 0.9px #2aa73f;
   outline: none;
 }
