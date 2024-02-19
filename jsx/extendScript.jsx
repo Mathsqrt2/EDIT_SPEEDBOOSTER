@@ -6,7 +6,7 @@ var pluginPath;
 $.processEffects = {
     getEffectsArray: function() {
         var effectsArray = [];
-        var effectsSave = new File(pluginPath + this.fixPath("\\config\\config.json"));
+        var effectsSave = new File(pluginPath + this.fixPath("\\config\\effects.json"));
 
         if (!effectsSave.exists) {
             return effectsArray;
@@ -21,6 +21,17 @@ $.processEffects = {
         var data = JSON.parse(dataset);
         alert(data.name);
         return 0;
+    },
+    saveConfigValues: function(configValues) {
+
+        var configContent = JSON.parse(configValues);
+        configContent.status = true;
+        var configPath = pluginPath + "\\config\\config.json";
+        var config = new File(configPath);
+
+        config.open("w");
+        config.write(JSON.stringify(configContent));
+        config.close();
     },
     findElements: function() {
         return 0;
@@ -68,4 +79,27 @@ function isItFirstUseJSX(path) {
 
     var output = JSON.stringify(newResponse);
     return output;
+}
+
+function loadConfigurationFile() {
+
+    var configPath = pluginPath + "\\config\\config.json";
+    var config = new File(configPath);
+
+    var configResponse = {
+        status: false,
+    }
+
+    if (config.exists) {
+
+        config.open("r");
+        configResponse = config.read();
+        configResponse.status = true;
+        config.close();
+
+        return configResponse;
+    } else {
+        return JSON.stringify(configResponse);
+    }
+
 }
