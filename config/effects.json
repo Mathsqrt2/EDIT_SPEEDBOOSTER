@@ -1,64 +1,36 @@
 [
     {
-        "name": "test1",
+        "name": "Stabilize",
         "properties": [
             {
-                "name": "property1",
-                "type": "text",
-                "value": "value1"
-            },
-            {
-                "name": "property2",
-                "type": "text",
-                "value": "value2"
+                "name": "amount",
+                "type": "number",
+                "value": 25
             }
         ]
     },
     {
-        "name": "test2",
+        "name": "Scale animation",
         "properties": [
             {
-                "name": "property1",
-                "type": "array",
-                "value": [
-                    21,
-                    37
-                ]
+                "name": "velocity",
+                "type": "number",
+                "value": 5
             },
             {
-                "name": "property2",
-                "type": "text",
-                "value": "value2"
+                "name": "in/out",
+                "type": "bool",
+                "value": true
             }
         ]
     },
     {
-        "name": "test3",
+        "name": "Backgroundify",
         "properties": [
             {
                 "name": "property1",
                 "type": "number",
                 "value": "value1"
-            },
-            {
-                "name": "property2",
-                "type": "text",
-                "value": "value2"
-            }
-        ]
-    },
-    {
-        "name": "test4",
-        "properties": [
-            {
-                "name": "property1",
-                "type": "number",
-                "value": "value1"
-            },
-            {
-                "name": "property2",
-                "type": "text",
-                "value": "value2"
             },
             {
                 "name": "property2",
