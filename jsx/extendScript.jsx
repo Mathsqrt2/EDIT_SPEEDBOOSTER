@@ -17,8 +17,9 @@ $.processEffects = {
 
         return effectsArray;
     },
-    implementEffect: function() {
-        alert("works");
+    implementEffect: function(dataset) {
+        var data = JSON.parse(dataset);
+        alert(data.name);
         return 0;
     },
     findElements: function() {
