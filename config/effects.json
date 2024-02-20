@@ -3,11 +3,12 @@
         "name": "Stabilize",
         "properties": [
             {
-                "name": "amount [%]",
+                "name": "amount",
                 "type": "number",
                 "min": 0,
                 "max": 200,
-                "value": 25
+                "value": 25,
+                "unit": "[%]"
             }
         ]
     },
@@ -15,16 +16,18 @@
         "name": "Scale animation",
         "properties": [
             {
-                "name": "velocity [ %/sec ]",
+                "name": "velocity",
                 "type": "number",
                 "min": 0,
                 "max": 10,
-                "value": 5
+                "value": 5,
+                "unit": "[%/sec]"
             },
             {
                 "name": "in/out",
                 "type": "bool",
-                "value": true
+                "value": true,
+                "unit": "[on/of]"
             }
         ]
     },
@@ -32,9 +35,13 @@
         "name": "Backgroundify",
         "properties": [
             {
-                "name": "warning",
-                "type": "alert",
-                "value": "This effect works only with clip under playhead"
+                "name": "use for background:",
+                "type": "switch",
+                "value": "layer below",
+                "options": [
+                    "layer below",
+                    "layer itself"
+                ]
             }
         ]
     }

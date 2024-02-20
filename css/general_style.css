@@ -40,10 +40,17 @@ body {
   outline: none;
 }
 
-.noEditablePropertiesWarning{
+.noEditablePropertiesWarning {
   font-size: 10pt;
   font-weight: 800;
-  background-color: rgb(238, 125, 125);
+  background-color: rgb(214, 87, 87);
   padding: 8px 14px;
   border-radius: 32px;
+}
+
+.propertySeparator{
+  width: 100%;
+  height: 1.5px;
+  margin: 25px 0;
+  background-color: #2aa73f;
 }

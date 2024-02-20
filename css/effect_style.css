@@ -12,7 +12,7 @@
   background-color: #151515;
   width: 100%;
   min-width: 376px;
-  max-width: 460px;
+  max-width: 420px;
   border-radius: 32px;
 
   display: flex;
@@ -56,19 +56,5 @@
 }
 
 .effectPropertyLabel {
-  margin: 10px 0 10px 0;
-  font-size: 8pt;
-}
-
-.subPropertyInput {
-  font-family: montserrat;
-  font-size: 8pt;
-
-  color: white;
-  background-color: #333333;
-  border: solid 0.9px #2aa73f;
-  outline: none;
-
-  padding: 6px 12px;
-  margin: 0 0 10px 0;
+  font-size: 10pt;
 }

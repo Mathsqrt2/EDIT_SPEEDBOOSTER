@@ -19,7 +19,7 @@ $.processEffects = {
     },
     implementEffect: function(dataset) {
         var data = JSON.parse(dataset);
-        alert(data.name);
+        alert(dataset);
         return 0;
     },
     saveConfigValues: function(configValues) {

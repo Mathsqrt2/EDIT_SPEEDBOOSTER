@@ -1,0 +1,64 @@
+.subPropertyInput {
+  font-family: montserrat;
+  font-size: 8pt;
+
+  color: white;
+  background-color: #333333;
+  border: solid 0.9px #2aa73f;
+  outline: none;
+
+  padding: 6px 12px;
+  margin: 0 0 10px 0;
+
+  cursor: pointer;
+}
+
+.subPropertyInput:focus {
+  outline: none;
+}
+
+.options {
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+.options:focus {
+  outline: none;
+}
+
+.switchSelector {
+  font-family: montserrat;
+  font-size: 8pt;
+
+  color: white;
+  background-color: #333333;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 12px;
+  margin: 0 0 10px 0;
+  border: solid 0.9px #2aa73f;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.angeSelectorBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rangeLabel,
+.rangeContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10pt;
+}
+
+.rangeScale{
+    font-size: 8pt;
+    color: #d1d1d1;
+}
