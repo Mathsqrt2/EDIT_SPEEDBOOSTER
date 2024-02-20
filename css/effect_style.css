@@ -10,7 +10,9 @@
 }
 .effectBody {
   background-color: #151515;
-  width: 75%;
+  width: 100%;
+  min-width: 376px;
+  max-width: 460px;
   border-radius: 32px;
 
   display: flex;
@@ -32,9 +34,10 @@
   font-weight: 800;
   font-size: 12pt;
   margin-left: 25px;
+  white-space: nowrap;
 }
 .buttonsCollector {
-  margin-right: 25px;
+  margin-right: 12px;
 }
 #executeEffectButton {
   margin-right: 12px;

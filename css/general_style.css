@@ -20,22 +20,30 @@ body {
   display: none !important;
 }
 
-.alertBox{
+.alertBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.alertContent{
+.alertContent {
   font-size: large;
   font-weight: 800;
   background-color: rgb(238, 125, 125);
   padding: 16px;
   border-radius: 32px;
 }
-.alertContent:hover{
-  transform: scale(0.95,0.95);
+.alertContent:hover {
+  transform: scale(0.95, 0.95);
 }
-.alertContent:focus{
+.alertContent:focus {
   outline: none;
+}
+
+.noEditablePropertiesWarning{
+  font-size: 10pt;
+  font-weight: 800;
+  background-color: rgb(238, 125, 125);
+  padding: 8px 14px;
+  border-radius: 32px;
 }

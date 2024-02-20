@@ -15,7 +15,7 @@
         "name": "Scale animation",
         "properties": [
             {
-                "name": "velocity [%/sec]",
+                "name": "velocity [ %/sec ]",
                 "type": "number",
                 "min": 0,
                 "max": 10,
@@ -32,14 +32,9 @@
         "name": "Backgroundify",
         "properties": [
             {
-                "name": "property1",
-                "type": "number",
-                "value": "value1"
-            },
-            {
-                "name": "property2",
-                "type": "text",
-                "value": "value2"
+                "name": "warning",
+                "type": "alert",
+                "value": "This effect works only with clip under playhead"
             }
         ]
     }
