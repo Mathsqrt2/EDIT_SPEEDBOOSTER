@@ -7,7 +7,7 @@
   background-color: #151515;
   font-family: montserrat;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #headerMenuBox {
@@ -15,6 +15,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
 
   gap: 15pt;
 }
@@ -30,6 +31,7 @@
 
 #appTitle {
   margin-left: 30px;
+  white-space: nowrap;
 }
 
 #appHeadDivider {
@@ -69,13 +71,14 @@
 }
 
 #trackIndexSelector {
+  box-sizing: border-box;
   color: white;
   background-color: #333333;
   font-family: montserrat;
   font-size: 8pt;
   
   width: 100%;
-  padding: 8px 12px;
+  padding: 4px 6px;
   border: solid 0.9px #2aa73f;
   outline: none;
 }
