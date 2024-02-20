@@ -49,8 +49,8 @@ body {
 }
 
 .propertySeparator{
-  width: 100%;
+  width: 80%;
   height: 1.5px;
-  margin: 25px 0;
-  background-color: #2aa73f;
+  margin: 10px 0;
+  background-color: rgba(42, 167, 63,0.5);
 }

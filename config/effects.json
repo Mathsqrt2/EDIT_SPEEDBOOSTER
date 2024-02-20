@@ -1,9 +1,11 @@
 [
     {
         "name": "Stabilize",
+        "id": 0,
         "properties": [
             {
                 "name": "amount",
+                "subpropID": 0,
                 "type": "number",
                 "min": 0,
                 "max": 200,
@@ -14,9 +16,11 @@
     },
     {
         "name": "Scale animation",
+        "id": 1,
         "properties": [
             {
                 "name": "velocity",
+                "subpropID": 0,
                 "type": "number",
                 "min": 0,
                 "max": 10,
@@ -24,18 +28,25 @@
                 "unit": "[%/sec]"
             },
             {
-                "name": "in/out",
-                "type": "bool",
-                "value": true,
-                "unit": "[on/of]"
+                "name": "direction",
+                "subpropID": 1,
+                "type": "switch",
+                "value": "increasing",
+                "unit": "[up / down]",
+                "options": [
+                    "increasing",
+                    "decreasing"
+                ]
             }
         ]
     },
     {
         "name": "Backgroundify",
+        "id": 2,
         "properties": [
             {
                 "name": "use for background:",
+                "subpropID": 0,
                 "type": "switch",
                 "value": "layer below",
                 "options": [
