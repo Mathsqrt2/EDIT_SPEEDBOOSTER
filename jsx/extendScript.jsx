@@ -19,21 +19,41 @@ $.processEffects = {
     },
     implementEffect: function(dataset) {
         var data = JSON.parse(dataset);
-        alert(dataset);
         return 0;
     },
     saveConfigValues: function(configValues) {
 
         var configContent = JSON.parse(configValues);
-        configContent.status = true;
-        var configPath = pluginPath + "\\config\\config.json";
+        var configPath = pluginPath + this.fixPath("\\config\\config.json");
         var config = new File(configPath);
 
+        var interfaceConfig = {
+            applyFor: configContent.applyFor,
+            track: configContent.track,
+            status: true,
+        }
+
         config.open("w");
-        config.write(JSON.stringify(configContent));
+        config.write(JSON.stringify(interfaceConfig));
         config.close();
+
+        var tempValues;
+        var effects = new File(pluginPath + this.fixPath("\\config\\effects.json"));
+        effects.open("r");
+        tempValues = JSON.parse(effects.read());
+        effects.close();
+
+        
+        for(var i = 0; i < tempValues.length; i++){
+            if(tempValues[i].name == configContent.name){
+                for(var j = 0; j < configContent.props.length; j++){
+                    
+                }
+            }
+        }
+
     },
-    findElements: function() {
+    findElements: function(mode) {
         return 0;
     },
     fixPath: function(pathToFix) {
