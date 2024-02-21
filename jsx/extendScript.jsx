@@ -21,20 +21,16 @@ $.processEffects = {
         var data = JSON.parse(dataset);
         return 0;
     },
-    saveConfigValues: function(configValues) {
-
+    saveConfigValues: function(dataset,configValues) {
+        var datasetContent = JSON.parse(dataset);
+        
         var configContent = JSON.parse(configValues);
+        configContent.status = true;
         var configPath = pluginPath + this.fixPath("\\config\\config.json");
         var config = new File(configPath);
 
-        var interfaceConfig = {
-            applyFor: configContent.applyFor,
-            track: configContent.track,
-            status: true,
-        }
-
         config.open("w");
-        config.write(JSON.stringify(interfaceConfig));
+        config.write(JSON.stringify(configContent));
         config.close();
 
         var tempValues;
@@ -45,8 +41,8 @@ $.processEffects = {
 
         
         for(var i = 0; i < tempValues.length; i++){
-            if(tempValues[i].name == configContent.name){
-                for(var j = 0; j < configContent.props.length; j++){
+            if(tempValues[i].name == datasetContent.name){
+                for(var j = 0; j < datasetContent.props.length; j++){
                     
                 }
             }
