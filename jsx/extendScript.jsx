@@ -21,11 +21,12 @@ $.processEffects = {
         var data = JSON.parse(dataset);
         return 0;
     },
-    saveConfigValues: function(dataset,configValues) {
+    saveConfigValues: function(dataset, configValues) {
         var datasetContent = JSON.parse(dataset);
-        
         var configContent = JSON.parse(configValues);
+
         configContent.status = true;
+
         var configPath = pluginPath + this.fixPath("\\config\\config.json");
         var config = new File(configPath);
 
@@ -34,20 +35,16 @@ $.processEffects = {
         config.close();
 
         var tempValues;
-        var effects = new File(pluginPath + this.fixPath("\\config\\effects.json"));
+        var effectsPath = pluginPath + this.fixPath("\\config\\effects.json");
+        var effects = new File(effectsPath);
         effects.open("r");
         tempValues = JSON.parse(effects.read());
         effects.close();
 
-        
-        for(var i = 0; i < tempValues.length; i++){
-            if(tempValues[i].name == datasetContent.name){
-                for(var j = 0; j < datasetContent.props.length; j++){
-                    
-                }
-            }
-        }
-
+        tempValues[datasetContent.id].properties = datasetContent.props;
+        effects.open("w");
+        effects.write(JSON.stringify(tempValues));
+        effects.close();
     },
     findElements: function(mode) {
         return 0;
