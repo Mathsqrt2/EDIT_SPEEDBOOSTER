@@ -1,3 +1,4 @@
+app.enableQE();
 var proj = app.project;
 var seq = proj.activeSequence;
 var currentOS;
@@ -6,6 +7,7 @@ var pluginPath;
 $.processEffects = {
     foundClips: [],
     config: {},
+    effects: {},
     getEffectsArray: function() {
         var effectsArray = [];
         var effectsSave = new File(pluginPath + this.fixPath("\\config\\effects.json"));
@@ -16,23 +18,33 @@ $.processEffects = {
         effectsSave.open("r");
         effectsArray = effectsSave.read();
         effectsSave.close();
-
+        this.effects = effectsArray;
         return effectsArray;
     },
     implementEffect: function(dataset) {
         var data = JSON.parse(dataset);
         this.findElements(this.config.applyFor);
-    
-    
+
+        for (var i = 0; i < this.foundClips.length; i++) {
+            var currentClip = this.foundClips[i];
+            currentClip.setSelected(1, 1);
+
+            switch (data.name) {
+                default:
+            }
+
+            currentClip.setSelected(0,1);
+        }
+
         return 0;
     },
     saveConfigValues: function(dataset, configValues) {
         var datasetContent = JSON.parse(dataset);
         var configContent = JSON.parse(configValues);
         this.config = configContent;
-    
+
         configContent.status = true;
-        
+
         var configPath = pluginPath + this.fixPath("\\config\\config.json");
         var config = new File(configPath);
 
@@ -66,13 +78,17 @@ $.processEffects = {
         } else if (mode == 1) {
             var clipsOnTrackCounter = 0;
             var currentTrack = tracks[this.config.track];
-            for (var i = 0; i < currentTrack.clips.length; i++) {
-                var currentClip = currentTrack.clips[i];
-                this.foundClips.push(currentClip);
-                clipsOnTrackCounter++;
-            }
-            if(!clipsOnTrackCounter){
-                alert("This track doesn't contain any clips");
+            if (this.config.track < tracks.length) {
+                for (var i = 0; i < currentTrack.clips.length; i++) {
+                    var currentClip = currentTrack.clips[i];
+                    this.foundClips.push(currentClip);
+                    clipsOnTrackCounter++;
+                }
+                if (!clipsOnTrackCounter) {
+                    alert("This track doesn't contain any clips");
+                }
+            } else {
+                alert("Track with specified index doesn't exist");
             }
         } else if (mode == 2) {
             var selectedCounter = 0;
