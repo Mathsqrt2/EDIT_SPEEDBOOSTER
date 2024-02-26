@@ -42,6 +42,17 @@
   cursor: pointer;
 }
 
+.mainSwitchBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.customSwitchOption{
+  margin-bottom: 20px;
+}
+
 .angeSelectorBox {
   display: flex;
   flex-direction: column;
