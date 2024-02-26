@@ -4,6 +4,8 @@ var currentOS;
 var pluginPath;
 
 $.processEffects = {
+    foundClips: [],
+    config: {},
     getEffectsArray: function() {
         var effectsArray = [];
         var effectsSave = new File(pluginPath + this.fixPath("\\config\\effects.json"));
@@ -19,15 +21,18 @@ $.processEffects = {
     },
     implementEffect: function(dataset) {
         var data = JSON.parse(dataset);
-        alert(dataset);
+        this.findElements(this.config.applyFor);
+    
+    
         return 0;
     },
     saveConfigValues: function(dataset, configValues) {
         var datasetContent = JSON.parse(dataset);
         var configContent = JSON.parse(configValues);
-
+        this.config = configContent;
+    
         configContent.status = true;
-
+        
         var configPath = pluginPath + this.fixPath("\\config\\config.json");
         var config = new File(configPath);
 
@@ -48,7 +53,43 @@ $.processEffects = {
         effects.close();
     },
     findElements: function(mode) {
-        return 0;
+        var tracks = seq.videoTracks;
+        this.foundClips = [];
+        if (mode == 0) {
+            for (var i = 0; i < tracks.length; i++) {
+                var currentTrack = tracks[i];
+                for (var j = 0; j < currentTrack.clips.length; j++) {
+                    var currentClip = currentTrack.clips[j];
+                    this.foundClips.push(currentClip);
+                }
+            }
+        } else if (mode == 1) {
+            var clipsOnTrackCounter = 0;
+            var currentTrack = tracks[this.config.track];
+            for (var i = 0; i < currentTrack.clips.length; i++) {
+                var currentClip = currentTrack.clips[i];
+                this.foundClips.push(currentClip);
+                clipsOnTrackCounter++;
+            }
+            if(!clipsOnTrackCounter){
+                alert("This track doesn't contain any clips");
+            }
+        } else if (mode == 2) {
+            var selectedCounter = 0;
+            for (var i = 0; i < tracks.length; i++) {
+                var currentTrack = tracks[i];
+                for (var j = 0; j < currentTrack.clips.length; j++) {
+                    var currentClip = currentTrack.clips[j];
+                    if (currentClip.isSelected()) {
+                        this.foundClips.push(currentClip);
+                        selectedCounter++;
+                    }
+                }
+            }
+            if (!selectedCounter) {
+                alert("Please select clips!");
+            }
+        }
     },
     fixPath: function(pathToFix) {
         var newPath = pathToFix;
