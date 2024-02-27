@@ -6,6 +6,7 @@ var pluginPath;
 
 $.processEffects = {
     foundClips: [],
+    foundQEClips: [],
     config: {},
     effects: {},
     getEffectsArray: function() {
@@ -30,10 +31,21 @@ $.processEffects = {
             currentClip.setSelected(1, 1);
 
             switch (data.name) {
-                default:
+                case "Stabilize":
+                    
+                    break;
+                case "Scale animation":
+                    
+                    break;
+                case "Backgroundify":
+                    
+                    break;
+                case "Nestify":
+                    
+                    break;
             }
 
-            currentClip.setSelected(0,1);
+            currentClip.setSelected(0, 1);
         }
 
         return 0;
